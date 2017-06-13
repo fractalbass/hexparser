@@ -1,4 +1,10 @@
+#--------------------------------------------------------------
 #  A simple file to load data and print it.
+#  By Miles R. Porter
+#  Painted Harmony Group, Inc
+#  June 13, 2017
+#  Please See LICENSE.txt
+#--------------------------------------------------------------
 
 from lineparser import LineParser
 from fileutils import FileUtils

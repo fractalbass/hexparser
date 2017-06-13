@@ -1,5 +1,11 @@
-class LineParser():
+#--------------------------------------------------------------
+#  By Miles R. Porter
+#  Painted Harmony Group, Inc
+#  June 13, 2017
+#  Please See LICENSE.txt
+#--------------------------------------------------------------
 
+class LineParser():
 
     def __init__(self, Name, SearchCode, Start_Field, End_Field, Scale, Offset):
         self.name = Name
