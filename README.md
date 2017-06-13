@@ -61,12 +61,12 @@ Running the MQTT demonstration involves the following steps:
 - Make sure that the MQTT Broker (Mosquitto) is running.  (the start_mosquitto.sh file has been added if you install mosquitto on a Mac using homebrew.
 - Launch the MQTT client script by running:
 <pre>
-mosquitto_sub -h 127.0.0.1 -t hexstreamer
+➜ mosquitto_sub -h 127.0.0.1 -t hexstreamer
 </pre>
 - Run the hexstreamer.py program
-
-python hexstreamer.py
-
+<pre>
+➜ python hexstreamer.py
+</pre>
 Data that is included in the text file and matches the configured parser(s) will be streamed via MQTT to the running MQTT client.
 
 
