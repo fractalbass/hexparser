@@ -15,9 +15,8 @@ class HexStreamer():
                     LineParser('rpm_parser', 'CF004', 10, 8, 0.125, 0.0),
                     LineParser('fuel_parser', '18FEF2', 9, 7, 0.05, 0.0)]
 
-        #lines = fileutils.importFile("short_test_file.txt")
-        lines = fileutils.importFile("GatewayTruck.asc")
-
+        lines = fileutils.importFile("short_test_file.txt")
+        
         errorcount=0
         successcount=0
         for line in lines:
