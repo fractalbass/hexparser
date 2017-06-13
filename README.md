@@ -37,3 +37,37 @@ Type "help", "copyright", "credits" or "license" for more information.
 
 In the above, the parser will take the value of "2211" and convert that number to deciaml from the assumed hex.
 It will then multiply that number by the scale factor of 1.0, and then add the offset of -5.0
+
+# hexstreamer
+
+hexstreamer.py is a simple python program that streams hexidecimal data in a file into a
+mqtt data stream.  In order to run this script, you will need the following this:
+
+- The Mosquitto MQTT broker installed on your system
+- The Mosquitto python library installed in your pyton application
+- An MQTT client application running to listen to the stream
+
+To install the Mosquitto client application, follow the directions here:
+
+https://simplifiedthinking.co.uk/2015/10/03/install-mqtt-server/
+
+To install the MQTT client library, you can also follow the directions on the above page.
+
+## Demonstration:
+
+Running the MQTT demonstration involves the following steps:
+
+- Edit the hexstreamer python program similarly to the hexparser program to include the parsers you'd like to use
+- Make sure that the MQTT Broker (Mosquitto) is running.  (the start_mosquitto.sh file has been added if you install mosquitto on a Mac using homebrew.
+- Launch the MQTT client script by running:
+<pre>
+mosquitto_sub -h 127.0.0.1 -t hexstreamer
+</pre>
+- Run the hexstreamer.py program
+
+python hexstreamer.py
+
+Data that is included in the text file and matches the configured parser(s) will be streamed via MQTT to the running MQTT client.
+
+
+
